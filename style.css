@@ -175,31 +175,6 @@ section {
     animation: fadeInUp 0.8s ease forwards;
 }
 
-/* Horizontal Scroll Container */
-.wishlist-scroll {
-    display: flex;
-    gap: 30px;
-    overflow-x: auto;
-    scroll-snap-type: x mandatory;
-    padding: 20px 10px;
-}
-
-/* Hide scrollbar (optional clean look) */
-.wishlist-scroll::-webkit-scrollbar {
-    height: 6px;
-}
-
-.wishlist-scroll::-webkit-scrollbar-thumb {
-    background: #444;
-    border-radius: 10px;
-}
-
-/* Cards Snap */
-.wishlist-scroll .card {
-    flex: 0 0 auto;
-    scroll-snap-align: center;
-}
-
 html {
     scroll-behavior: smooth;
 }
@@ -207,26 +182,27 @@ html {
 .carousel-container {
     position: relative;
     overflow: hidden;
-    padding: 40px 0;
+    padding: 80px 0;
 }
 
 .carousel-track {
     display: flex;
     gap: 30px;
-    transition: transform 0.5s ease;
+    transition: transform 0.6s ease;
 }
 
 .carousel-track .card {
     flex: 0 0 320px;
-    opacity: 0.6;
-    transform: scale(0.9);
-    transition: all 0.4s ease;
+    opacity: 0.5;
+    transform: scale(0.85);
+    transition: all 0.5s ease;
 }
 
 .carousel-track .card.active {
     opacity: 1;
     transform: scale(1);
 }
+
 
 /* Arrows */
 .arrow {
@@ -250,13 +226,15 @@ html {
 }
 
 .arrow.left {
-    left: 0;
+    left: 15px;
 }
 
 .arrow.right {
-    right: 0;
+    right: 15px;
 }
 
-
+.arrow {
+    font-size: 1.8rem;
+}
 
 
