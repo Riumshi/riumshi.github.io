@@ -1,10 +1,10 @@
 body {
     margin: 0;
-    font-family: Arial, sans-serif;
-    background-color: #0f0f14;
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #0f0f14, #151520);
     color: white;
-    text-align: center;
 }
+
 
 header {
     padding: 20px;
@@ -16,23 +16,67 @@ section {
 }
 
 .card {
-    background-color: #1a1a22;
-    padding: 20px;
-    margin: 20px auto;
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    padding: 25px;
+    margin: 30px auto;
     width: 300px;
-    border-radius: 10px;
+    border-radius: 16px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
+
+.card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.4);
+}
+
 
 a {
     display: inline-block;
     margin: 10px;
-    padding: 8px 15px;
-    background-color: #2a2a35;
+    padding: 10px 18px;
+    background: linear-gradient(135deg, #2a2a35, #3a3a45);
     color: white;
     text-decoration: none;
-    border-radius: 5px;
+    border-radius: 8px;
+    transition: all 0.3s ease;
 }
 
 a:hover {
-    background-color: #3a3a45;
+    transform: scale(1.05);
+    background: linear-gradient(135deg, #3a3a45, #4a4a55);
 }
+
+
+.container {
+    max-width: 1000px;
+    margin: auto;
+    padding: 20px;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+section {
+    animation: fadeInUp 0.8s ease forwards;
+}
+
+
+.hero {
+    padding: 80px 20px;
+}
+.hero h1 {
+    font-size: 2.5rem;
+}
+.hero p {
+    opacity: 0.8;
+}
+
