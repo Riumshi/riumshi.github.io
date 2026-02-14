@@ -6,8 +6,16 @@ const nextBtn = document.querySelector('.arrow.right');
 let currentIndex = 0;
 
 function updateCarousel() {
-    const cardWidth = cards[0].offsetWidth + 30; // 30 = gap
-    track.style.transform = `translateX(${-currentIndex * cardWidth}px)`;
+    const container = document.querySelector('.carousel-container');
+    const containerWidth = container.offsetWidth;
+    const cardWidth = cards[0].offsetWidth;
+    const gap = 30; // must match CSS gap
+
+    // Calculate how much space to center the active card
+    const offset = (containerWidth / 2) - (cardWidth / 2);
+
+    track.style.transform =
+        `translateX(${offset - (currentIndex * (cardWidth + gap))}px)`;
 
     cards.forEach((card, index) => {
         card.classList.remove('active');
@@ -30,5 +38,8 @@ prevBtn.addEventListener('click', () => {
         updateCarousel();
     }
 });
+
+// Recalculate when window resizes
+window.addEventListener('resize', updateCarousel);
 
 updateCarousel();
