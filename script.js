@@ -1,45 +1,63 @@
 const track = document.querySelector('.carousel-track');
-const cards = document.querySelectorAll('.carousel-track .card');
+let cards = document.querySelectorAll('.carousel-track .card');
 const prevBtn = document.querySelector('.arrow.left');
 const nextBtn = document.querySelector('.arrow.right');
 
-let currentIndex = 0;
+const gap = 30;
+let currentIndex = 1;
 
-function updateCarousel() {
+// Clone first and last
+const firstClone = cards[0].cloneNode(true);
+const lastClone = cards[cards.length - 1].cloneNode(true);
+
+track.appendChild(firstClone);
+track.insertBefore(lastClone, cards[0]);
+
+cards = document.querySelectorAll('.carousel-track .card');
+
+function updateCarousel(animate = true) {
     const container = document.querySelector('.carousel-container');
     const containerWidth = container.offsetWidth;
     const cardWidth = cards[0].offsetWidth;
-    const gap = 30; // must match CSS gap
 
-    // Calculate how much space to center the active card
     const offset = (containerWidth / 2) - (cardWidth / 2);
+
+    if (!animate) {
+        track.style.transition = "none";
+    } else {
+        track.style.transition = "transform 0.6s ease";
+    }
 
     track.style.transform =
         `translateX(${offset - (currentIndex * (cardWidth + gap))}px)`;
 
-    cards.forEach((card, index) => {
-        card.classList.remove('active');
-        if (index === currentIndex) {
-            card.classList.add('active');
-        }
-    });
+    cards.forEach(card => card.classList.remove('active'));
+    cards[currentIndex].classList.add('active');
 }
 
 nextBtn.addEventListener('click', () => {
-    if (currentIndex < cards.length - 1) {
-        currentIndex++;
-        updateCarousel();
-    }
+    currentIndex++;
+    updateCarousel();
 });
 
 prevBtn.addEventListener('click', () => {
-    if (currentIndex > 0) {
-        currentIndex--;
-        updateCarousel();
+    currentIndex--;
+    updateCarousel();
+});
+
+track.addEventListener('transitionend', () => {
+    if (currentIndex === cards.length - 1) {
+        currentIndex = 1;
+        updateCarousel(false);
+    }
+
+    if (currentIndex === 0) {
+        currentIndex = cards.length - 2;
+        updateCarousel(false);
     }
 });
 
-// Recalculate when window resizes
 window.addEventListener('resize', updateCarousel);
 
 updateCarousel();
+
