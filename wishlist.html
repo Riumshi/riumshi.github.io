@@ -3,62 +3,244 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rium</title>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <title>Rium's Wishlist Hub</title>
+
+    <meta name="description" content="Support Rium's creative journey. Wishlist and direct support options available.">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
-<button class="menu-toggle" id="menuToggle">☰</button>
+    <button class="menu-toggle" id="menuToggle">☰</button>
+
 <div class="sidebar-overlay" id="sidebarOverlay"></div>
 
 <aside class="sidebar" id="sidebar">
     <h2 class="logo">Rium</h2>
     <nav>
-        <a href="index.html" class="active">Home</a>
+        <a href="index.html">Home</a>
         <a href="wishlist.html">Wishlist</a>
         <a href="#">YouTube</a>
         <a href="#">Portfolio</a>
     </nav>
 </aside>
 
-<main class="content home-page">
+<!-- ===== HEADER (FULL WIDTH) ===== -->
+<header class="site-header">
+    <h1>Rium's Wishlist Hub</h1>
 
-    <!-- HERO -->
-    <section class="home-hero">
-        <h1>Hi, I'm Rium.</h1>
-        <p class="tagline">
-            Creator. Builder. Dreamer.
-        </p>
+    <svg class="wave" viewBox="0 0 1440 200" preserveAspectRatio="none">
+        <path fill="currentColor" d="
+            M0,100 
+            C150,40 300,160 450,100 
+            C600,40 750,160 900,100 
+            C1050,40 1200,160 1350,100 
+            C1420,80 1440,100 1440,100
+            L1440,200 
+            L0,200 
+            Z">
+        </path>
+    </svg>
+</header>
 
-        <div class="home-buttons">
-            <a href="wishlist.html" class="primary-btn">View Wishlist</a>
-            <a href="#" class="secondary-btn">YouTube</a>
+<main>
+
+    <!-- ===== HERO + INTRO (CENTERED) ===== -->
+    <div class="container">
+
+        <section class="hero">
+            <h2>Support My Journey</h2>
+            <p>Every bit of support helps me build, create and grow.</p>
+        </section>
+
+        <section class="intro">
+            <p>
+                If you'd like to support my journey or gift something from my wishlist,
+                everything is listed below. Thank you for even being here.
+            </p>
+        </section>
+
+    </div>
+
+
+    <!-- ===== WISHLIST (FULL WIDTH CAROUSEL) ===== -->
+    <section class="wishlist">
+
+        <!-- Title centered -->
+        <div class="container">
+            <h2>Wishlist</h2>
         </div>
+
+        <!-- Carousel full width -->
+        <div class="carousel-container">
+            <button class="arrow left">&#10094;</button>
+
+            <div class="carousel-track">
+
+                <div class="card">
+    <img src="images/Kreo slab light.jpg" alt="Kreo SLab Light">
+    <h3>Kreo Slab Light</h3>
+    <p class="price">₹1,999</p>
+    <div class="card-buttons">
+        <a href="https://amzn.in/d/09AaaJld" target="_blank" rel="noopener noreferrer">Amazon</a>
+        <a href="https://dl.flipkart.com/s/zazI7KuuuN" target="_blank" rel="noopener noreferrer">Flipkart</a>
+
+    </div>
+</div>
+
+<div class="card">
+    <img src="images/Ant Esports 512gb Sata SSD.jpg" alt="Ant Esports 512gb Sata SSD">
+    <h3>Ant Esports 512gb Sata SSD</h3>
+    <p class="price">₹6,940</p>
+    <div class="card-buttons">
+        <a href="https://amzn.in/d/07KUwejp" target="_blank" rel="noopener noreferrer">Amazon</a>
+        <a href="#" class="disabled">Not Available</a>
+
+    </div>
+</div>
+
+
+                <div class="card">
+    <img src="images/BSC Trimmer.jpg" alt="BSC Trimmer">
+    <h3>BSC Trimmer</h3>
+    <p class="price">₹695</p>
+    <div class="card-buttons">
+        <a href="https://amzn.in/d/0gvyK3M8" target="_blank" rel="noopener noreferrer">Amazon</a>
+        <a href="https://dl.flipkart.com/s/zajmtvuuuN" target="_blank" rel="noopener noreferrer">Flipkart</a>
+
+    </div>
+</div>
+
+
+                <div class="card">
+    <img src="images/mountup monitor arm.jpg" alt="MountUp Monitor Arm">
+    <h3>MountUp Monitor Arm</h3>
+    <p class="price">₹2,999</p>
+    <div class="card-buttons">
+        <a href="https://amzn.in/d/072J6yws" target="_blank" rel="noopener noreferrer">Amazon</a>
+        <a href="#" class="disabled">Not Available</a>
+    </div>
+</div>
+
+
+                <div class="card">
+    <img src="images/fifine k669b microphone.jpg" alt="FIFINE K669B Microphone">
+    <h3>FIFINE K669B Mic</h3>
+    <p class="price">₹2,790</p>
+    <div class="card-buttons">
+        <a href="https://amzn.in/d/07ovGMdM" target="_blank" rel="noopener noreferrer">Amazon</a>
+        <a href="https://dl.flipkart.com/s/7!XWo6NNNN" target="_blank" rel="noopener noreferrer">Flipkart</a>
+    </div>
+</div>
+
+
+               <div class="card">
+    <img src="images/razer blackshark v2 x headphones.jpg" alt="Razer Blackshark V2 X">
+    <h3>Razer Blackshark V2 X</h3>
+    <p class="price">₹4,499</p>
+    <div class="card-buttons">
+        <a href="https://amzn.in/d/0hzmNQyw" target="_blank" rel="noopener noreferrer">Amazon</a>
+        <a href="#" class="disabled">Not Available</a>
+    </div>
+</div>
+
+
+                <div class="card">
+    <img src="images/iqoo 15.jpg" alt="iQOO 15 16GB 512GB">
+    <h3>iQOO 15 (16GB / 512GB)</h3>
+    <p class="price">₹79,999</p>
+    <div class="card-buttons">
+        <a href="https://amzn.in/d/0auwZ6Yh" target="_blank" rel="noopener noreferrer">Amazon</a>
+        <a href="https://dl.flipkart.com/s/zTsOwsuuuN" target="_blank" rel="noopener noreferrer">Flipkart</a>
+    </div>
+</div>
+
+            <div class="card">
+    <img src="images/astride office chair.jpg" alt="Astride Office Chair">
+    <h3>Astride Office Chair</h3>
+    <p class="price">₹4,999</p>
+    <div class="card-buttons">
+        <a href="https://amzn.in/d/06FuKDm0" target="_blank" rel="noopener noreferrer">Amazon</a>
+        <a href="https://dl.flipkart.com/s/zURNzCuuuN" target="_blank" rel="noopener noreferrer">Flipkart</a>
+
+    </div>
+</div>
+             
+              <div class="card">
+    <img src="images/Kreo owl full hd webcam.jpg" alt="Kreo Owl Full HD Webcam">
+    <h3>Kreo Owl FHD Webcam</h3>
+    <p class="price">₹3,799</p>
+    <div class="card-buttons">
+       <a href="https://amzn.in/d/06jzvFdo" target="_blank" rel="noopener noreferrer">Amazon</a>
+       <a href="https://dl.flipkart.com/s/7I8qpLNNNN" target="_blank" rel="noopener noreferrer">Flipkart</a>
+
+    </div>
+</div>
+
+              <div class="card">
+    <img src="images/hyper x pulsefire haste 2 core mouse.jpg" alt="HyperX Pulsefire Haste 2 Core">
+    <h3>HyperX Pulsefire Haste 2</h3>
+    <p class="price">₹3,690</p>
+    <div class="card-buttons">
+        <a href="https://amzn.in/d/0cAlEpp3" target="_blank" rel="noopener noreferrer">Amazon</a>
+        <a href="#" class="disabled">Not Available</a>
+    </div>
+</div>
+
+               <div class="card">
+    <img src="images/evofox katana x2 keyboard.jpg" alt="EvoFox Katana X2 Keyboard">
+    <h3>EvoFox Katana X2</h3>
+    <p class="price">₹1,899</p>
+    <div class="card-buttons">
+       <a href="https://amzn.in/d/0eO4UZ2t" target="_blank" rel="noopener noreferrer">Amazon</a>
+       <a href="https://dl.flipkart.com/s/zU7hxhuuuN" target="_blank" rel="noopener noreferrer">Flipkart</a>
+
+    </div>
+</div>
+            
+             <div class="card">
+    <img src="images/evofox xxl mosuepad.jpg" alt="EvoFox XXL Mousepad">
+    <h3>EvoFox XXL Mousepad</h3>
+    <p class="price">₹549</p>
+    <div class="card-buttons">
+        <a href="https://amzn.in/d/0cxdEtBg" target="_blank" rel="noopener noreferrer">Amazon</a>
+        <a href="https://dl.flipkart.com/s/zUWdyCuuuN" target="_blank" rel="noopener noreferrer">Flipkart</a>
+
+    </div>
+</div>
+
+            </div>
+
+            <button class="arrow right">&#10095;</button>
+        </div>
+
     </section>
 
-    <!-- ABOUT -->
-    <section class="home-section">
-        <h2>About Me</h2>
-        <p>
-            I'm building my own creative journey from scratch — learning,
-            creating content, upgrading my setup, and slowly turning ideas into reality.
-            This website is part of that process.
-        </p>
-    </section>
 
-    <!-- VISION -->
-    <section class="home-section">
-        <h2>Vision</h2>
-        <p>
-            My goal is simple: improve every day.
-            Better content. Better skills. Better discipline.
-            Everything here is a step toward that future.
-        </p>
-    </section>
+    <!-- ===== DONATION (CENTERED AGAIN) ===== -->
+    <div class="container">
+        
+        <section class="donation">
+    <h2>Direct Support</h2>
+    <div class="donation-box">
+        <p>UPI ID:</p>
+
+        <div class="upi-wrapper">
+            <span id="upi-id">vagsghgstwtw-1@oksbi</span>
+            <button id="copy-btn">Copy</button>
+        </div>
+
+        <div id="copy-feedback">Copied!</div>
+    </div>
+</section>
+
+    </div>
 
 </main>
 
 <script src="script.js"></script>
+
 </body>
 </html>
